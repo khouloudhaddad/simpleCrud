@@ -11,7 +11,7 @@
     <h1 class="text-center mb-3">List of clients</h1>
     <a class="btn btn-primary" href="/clients/create">New client</a>
     
-    <table class="table">
+    <table class="table table-bordered my-3">
 	  <thead>
 	    <tr>
 	      <th scope="col">ID</th>
@@ -32,7 +32,6 @@
 	      <td th:text="${client.phone}"></td>
 	      <td th:text="${client.address}"></td>
 	      <td th:text="${client.status}"></td>
-	      <td th:text="${client.email}"></td>
 	      <td th:text="${client.createdAt.toString().substring(0, 10)}"></td>
 	      <td style="white-space:nowrap">
 	      	<a class="btn btn-primary btn-sm" th:href="@{/clients/edit(id=${client.id})}">Edit</a>
